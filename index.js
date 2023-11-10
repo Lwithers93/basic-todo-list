@@ -4,6 +4,7 @@ const todoContainer = document.querySelector(".todoContainer");
 
 let todoList = [];
 
+// defines function that loads page with any stored data
 function initialLoad() {
   if (!localStorage.getItem("todos")) {
     return;
@@ -15,8 +16,10 @@ function initialLoad() {
   updateUI();
 }
 
+// load the page
 initialLoad();
 
+// add todo item button
 function addTodo() {
   const todo = textarea.value;
 
@@ -27,10 +30,13 @@ function addTodo() {
   todoList.push(todo);
 
   textarea.value = "";
+  textarea.style.background = "";
   updateUI();
 }
 
+// edit function, triggered onclick of edit icon
 function editTodo(index) {
+  todoList;
   textarea.value = todoList[index];
   todoList = todoList.filter((element, elementIndex) => {
     if (index === elementIndex) {
@@ -39,8 +45,10 @@ function editTodo(index) {
     return true;
   });
   updateUI();
+  textarea.style.background = "lightblue";
 }
 
+// delete function, triggered onclick of delete icon
 function deleteTodo(index) {
   todoList = todoList.filter((element, elementIndex) => {
     if (index === elementIndex) {
@@ -51,17 +59,18 @@ function deleteTodo(index) {
   updateUI();
 }
 
+// update user interface function, triggered in most functions
 function updateUI() {
   let newInnerHTML = "";
 
   todoList.forEach((todoElement, todoIndex) => {
-    newInnerHTML += `<div clas="todo">
+    newInnerHTML += `<div class="todo">
     <p>${todoElement}</p>
     <div class="btnContainer">
-      <button class="iconBtn" onclick="editTodo(${todoIndex})">
+      <button class="iconBtn edit" onclick="editTodo(${todoIndex})">
         <i class="fa-regular fa-pen-to-square"></i>
       </button>
-      <button class="iconBtn" onclick="deleteTodo(${todoIndex})"><i class="fa-solid fa-trash"></i></button>
+      <button class="iconBtn delete" onclick="deleteTodo(${todoIndex})"><i class="fa-solid fa-trash"></i></button>
     </div>
     </div>`;
   });
@@ -72,4 +81,5 @@ function updateUI() {
   localStorage.setItem("todos", JSON.stringify(todoList));
 }
 
+// listens for click to add item button
 addBtn.addEventListener("click", addTodo);
