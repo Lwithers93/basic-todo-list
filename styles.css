@@ -38,6 +38,11 @@ form textarea {
   width: 100%;
   min-height: 70px;
   padding: 14px;
+  border-radius: 5px;
+}
+
+form textarea:hover {
+  background: lightblue;
 }
 
 form button {
@@ -54,11 +59,8 @@ form button {
 
 .todo {
   padding: 14px;
-  border: 1px solid lightgray;
-}
-
-.todo:hover {
-  background: lightblue;
+  border: 1px solid gray;
+  border-radius: 5px;
 }
 
 .btnContainer {
@@ -80,6 +82,9 @@ form button {
   border-radius: 50%;
 }
 
-.iconBtn:hover {
-  background: lightblue;
+.edit:hover {
+  background: orange;
+}
+.delete:hover {
+  background: lightcoral;
 }
