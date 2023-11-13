@@ -5,7 +5,7 @@
 }
 
 h1,
-h2 {
+h3 {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -16,11 +16,16 @@ body {
   gap: 24px;
   padding: 14px;
   min-height: 100vh;
+  background-image: linear-gradient(#164863, #ddf2fd);
 }
 
 h1 {
   text-emphasis: "🤖";
   text-align: center;
+}
+
+h3 {
+  color: #164863;
 }
 
 form,
@@ -33,12 +38,17 @@ section {
   margin: 0 auto;
 }
 
+form {
+  align-items: center;
+}
+
 form textarea {
   resize: none;
   width: 100%;
   min-height: 70px;
   padding: 14px;
   border-radius: 5px;
+  background-color: #ddf2fd;
 }
 
 form textarea:hover {
@@ -48,6 +58,8 @@ form textarea:hover {
 form button {
   padding: 6px;
   cursor: pointer;
+  background-color: #ddf2fd;
+  width: 50%;
 }
 
 .todoContainer,
@@ -59,7 +71,7 @@ form button {
 
 .todo {
   padding: 14px;
-  border: 1px solid gray;
+  border: 1px solid #164863;
   border-radius: 5px;
 }
 
