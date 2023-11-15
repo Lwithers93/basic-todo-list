@@ -63,8 +63,8 @@ function deleteTodo(index) {
 }
 
 // complete function. marks todo item as complete
-function completeTodo(index, element) {
-  todoList[index] = "<s>" + element + "</s>";
+function completeTodo(index) {
+  todoList[index] = "<s>" + todoList[index] + "</s>";
   updateUI();
 }
 
@@ -80,7 +80,7 @@ function updateUI() {
         <i class="fa-regular fa-pen-to-square"></i>
       </button>
       <button class="iconBtn delete" onclick="deleteTodo(${todoIndex})"><i class="fa-solid fa-trash"></i></button>
-      <button class="iconBtn complete" onclick="completeTodo(${todoIndex}, ${todoElement})"><i class="fa-solid fa-check"></i></button>
+      <button class="iconBtn complete" onclick="completeTodo(${todoIndex})"><i class="fa-solid fa-check"></i></button>
     </div>
     </div>`;
   });
