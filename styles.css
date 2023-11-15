@@ -94,9 +94,15 @@ form button {
   border-radius: 50%;
 }
 
-.edit:hover {
-  background: orange;
+.complete:hover {
+  background: green;
 }
+
 .delete:hover {
   background: lightcoral;
 }
+
+.edit:hover {
+  background: orange;
+}
+
