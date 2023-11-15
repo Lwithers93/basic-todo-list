@@ -61,7 +61,8 @@ function deleteTodo(index) {
 
 // complete function. marks todo item as complete
 function completeTodo(index, element) {
-  document.getElementById(index).innerHTML = "<s>element</s>";
+  todoList[index] = "<s>" + element + "</s>";
+  updateUI();
 }
 
 // update user interface function, triggered in most functions
