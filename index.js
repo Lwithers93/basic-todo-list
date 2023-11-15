@@ -36,6 +36,9 @@ function addTodo() {
 
 // edit function, triggered onclick of edit icon
 function editTodo(index) {
+  if (textarea.value !== "") {
+    return false;
+  }
   todoList;
   textarea.value = todoList[index];
   todoList = todoList.filter((element, elementIndex) => {
