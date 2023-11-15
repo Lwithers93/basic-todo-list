@@ -64,7 +64,8 @@ function deleteTodo(index) {
 
 // complete function. marks todo item as complete
 function completeTodo(index) {
-  todoList[index] = "<s>" + todoList[index] + "</s>";
+  var completeItem = JSON.stringify(todoList[index]);
+  todoList[index] = "<s>" + completeItem + "</s>";
   updateUI();
 }
 
