@@ -76,7 +76,7 @@ function updateUI() {
         <i class="fa-regular fa-pen-to-square"></i>
       </button>
       <button class="iconBtn delete" onclick="deleteTodo(${todoIndex})"><i class="fa-solid fa-trash"></i></button>
-      <button class="iconBtn complete" onclick="completeTodo(${todoElement}, ${todoIndex})><i class="fa-solid fa-check"></i></button>
+      <button class="iconBtn complete" onclick="completeTodo(${todoElement}, ${todoIndex})"><i class="fa-solid fa-check"></i></button>
     </div>
     </div>`;
   });
