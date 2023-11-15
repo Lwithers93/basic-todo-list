@@ -37,7 +37,7 @@ function addTodo() {
 // edit function, triggered onclick of edit icon
 function editTodo(index) {
   if (textarea.value !== "") {
-    return false;
+    return true;
   }
   todoList;
   textarea.value = todoList[index];
@@ -64,8 +64,7 @@ function deleteTodo(index) {
 
 // complete function. marks todo item as complete
 function completeTodo(index) {
-  var completeItem = JSON.stringify(todoList[index]);
-  todoList[index] = "<s>" + completeItem + "</s>";
+  todoList[index] = "<s>" + todoList[index].toString() + "</s>";
   updateUI();
 }
 
