@@ -59,18 +59,24 @@ function deleteTodo(index) {
   updateUI();
 }
 
+// complete function. marks todo item as complete
+function completeTodo(element,index) {
+  document.getElementById(element).innerHTML = "<s>index</s>";
+}
+
 // update user interface function, triggered in most functions
 function updateUI() {
   let newInnerHTML = "";
 
   todoList.forEach((todoElement, todoIndex) => {
     newInnerHTML += `<div class="todo">
-    <p>${todoElement}</p>
+    <p id="${todoElement}">${todoElement}</p>
     <div class="btnContainer">
       <button class="iconBtn edit" onclick="editTodo(${todoIndex})">
         <i class="fa-regular fa-pen-to-square"></i>
       </button>
       <button class="iconBtn delete" onclick="deleteTodo(${todoIndex})"><i class="fa-solid fa-trash"></i></button>
+      <button class="iconBtn complete" onclick="completeTodo(${todoElement}, ${todoIndex})><i class="fa-solid fa-check"></i></button>
     </div>
     </div>`;
   });
