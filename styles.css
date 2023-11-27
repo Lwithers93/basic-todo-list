@@ -82,6 +82,10 @@ form button {
   margin-left: auto;
 }
 
+.completeItem {
+  text-decoration: line-through;
+}
+
 .iconBtn {
   background: transparent;
   border: none;
@@ -105,4 +109,3 @@ form button {
 .edit:hover {
   background: orange;
 }
-
