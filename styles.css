@@ -82,10 +82,6 @@ form button {
   margin-left: auto;
 }
 
-.complete-item {
-  text-decoration: line-through;
-}
-
 .iconBtn {
   background: transparent;
   border: none;
