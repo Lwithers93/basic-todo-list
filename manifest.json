@@ -1,0 +1,17 @@
+{
+  "background_color": "black",
+  "description": "This is your personal ToDo List App.",
+  "orientation": "portrait-primary",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "W-logo.png",
+      "sizes": "179x179",
+      "type": "image/png"
+    }
+  ],
+  "name": "ToDo List App",
+  "short_name": "ToDo List",
+  "start_url": "index.html",
+  "permissions": ["storage"]
+}
